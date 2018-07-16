@@ -1,0 +1,75 @@
+package ru.geekbrain.lesson1.java1.SultanovEmin;
+
+public class lesson_1 {
+    public static void main(String[] args) {
+        System.out.println(calculate(13, 41385, 2828, 1985));
+        System.out.println(domzadanie4(10, 3));
+        domzadanie5(413);
+        System.out.println(domzadanie6(-13));
+        getName("Emin");
+        domzadanie8(1985);
+
+
+        byte b = 7;         /* Задание 2 */
+        short s = 8;
+        int i = 1234567;
+        long l = 4000001500L;
+        float f = 4.13F;
+        double d = 28.28D;
+        char ch = '\u0421';
+        char ch2 = '\u043F';
+        char ch3 = '\u0430';
+        char ch4 = '\u0441';
+        char ch5 = '\u0438';
+        char ch6 = '\u0431';
+        char ch7 = '\u043E';
+        char ch8 = '\u0021';
+        boolean bl = true;
+        String str = "Первый урок";
+        System.out.println(ch + " " + ch2 + " " + ch3 + " " + ch4 + " " + ch5 + " " + ch6 + " " + ch7 + " " + ch8);
+
+
+    }
+
+    public static int calculate(int a, int b, int c, int d2)  /* Задача 3*/ {
+        return (a * (b + (c / d2)));
+    }
+
+    public static boolean domzadanie4(int a, int b) {  /*  Задача 4 */
+        int c = a + b;
+        if (c >= 10 && c <= 20) {
+            return true;
+        }
+        return false;
+    }
+
+    public static void domzadanie5(int a) {            /*Задача 5 */
+        if (a < 0) {
+            System.out.println("Число отрицательное");
+        } else {
+            System.out.println("Число положительное");
+        }
+    }
+
+    public static boolean domzadanie6(int a)  /*Задача 6 */ {
+        if (a < 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static void getName(String a) {
+        System.out.println("Привет, " + a);
+    }
+
+
+    public static void domzadanie8(int year) {
+        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println(year + " Год високосный.");
+        } else {
+
+            System.out.println(year + " Год не высокосный.");
+        }
+    }
+}
