@@ -1,0 +1,87 @@
+package Lesson2_massive;
+
+import java.util.Arrays;
+
+public class Main {
+/* Lesson 1 */
+    public static void main(String[] args) {
+        int arr[] = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+
+        for (int i : arr) {
+            if (i > 0) {
+                i++;
+            } else {
+                i = 0;
+            }
+            System.out.println(arr[i]);
+        }
+
+        int arr2[] = new int[8];            /* Lesson 2 */
+        {
+            for (int i = 0; i < 8; i++) {
+                arr2[i] = i * 3;
+            }
+            System.out.println(Arrays.toString(arr2));
+        }
+
+        int[] arr3 = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1}; /* Lesson 3 */
+        for (int i = 0; i < arr3.length; i++) {
+            if (arr3[i] < 6) {
+                arr3[i] *= 2;
+            }
+        }
+        System.out.println("Массив " + Arrays.toString(arr3));
+    }
+}
+
+
+package Lesson2_massive.ru.geekbrain2_;
+
+import java.util.Arrays;
+import java.util.Random;
+
+public class Execise_L2_L5 {                   /*Lesson*/
+    public static void main(String[] args) {
+        Random random = new Random();
+        double[] arr5 = new double [100];
+        int indexofMax = 0;
+        int indexofMin = 0;
+
+        for (int i = 0; i < arr5.length; i++) {
+            arr5[i] = random.nextInt(1500);
+        }
+        for (int i = 0; i < arr5.length; i++) {
+            if (arr5[i] > arr5[indexofMax]) {
+                indexofMax = i;
+            }
+        }
+            for (int i = 0; i < arr5.length; i++) {
+                if (arr5[i] < arr5[indexofMin]) {
+                    indexofMin = i;
+                }
+            }
+        System.out.println(Arrays.toString(arr5));
+            System.out.println("Максимальное число: " + arr5[indexofMax] + " Индекс: " + indexofMax + "  "
+                    + ".\n" + "Минимальное: " + arr5[indexofMin] + " Индекс: " + indexofMin);
+
+        }
+    }
+
+package Lesson2_massive.ru.geekbrain2_;
+
+import java.util.Arrays;
+
+public class Exercise_L2_4 {
+    public static void main(String[] args) {
+     int[][] arr = new int[5][5];
+      for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                if (i == j || i == arr.length - j - 1) arr[i][j] = 1;
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+    }
+
+}
