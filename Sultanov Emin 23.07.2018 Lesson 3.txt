@@ -1,0 +1,47 @@
+package Otgaday_cislo;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scaner = new Scanner(System.in);
+        System.out.println("Здравствуйте, представьтесь пожалуйста.");
+        String name = scaner.nextLine();
+        System.out.println("Здравствуйте," + name + " вам предстоит угадать число.");
+        int range = 55;
+        int number = (int) (Math.random() * range);
+        int round = 0;
+        int again = scaner.nextInt();
+        int break1 = scaner.nextInt();
+        while (true) {
+            System.out.println(name + " Пожалуйста, введите число.");
+            int inputnumber = scaner.nextInt();
+            round++;
+            if (round > 2) {
+                System.out.println("Повезет в следующий раз, не отчаивайтесь.");
+                System.out.println(name + " хотите продолжить? ");
+                System.out.println(name + " Пожалуйста, введите число. 1- ДА, 0 - НЕТ.");
+                if (again == 1) {
+                    return;
+                }
+                        break;
+
+                    }
+                    if (inputnumber == number) {
+                        System.out.println("Вы отгадали.");
+                        break;
+                    }
+
+                    if (inputnumber > number) {
+                        System.out.println("Загаданное число меньше.");
+                    } else {
+                        System.out.println("Загаданное число больше.");
+                    }
+
+                }
+                scaner.close();
+            }
+        }
+
+
